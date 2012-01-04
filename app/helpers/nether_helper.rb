@@ -1,4 +1,4 @@
-module ApplicationHelper
+module NetherHelper
   def nether(total_pages, url=nil, container=nil)
     opts = {
       :totalPages => total_pages,
