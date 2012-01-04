@@ -8,6 +8,6 @@ module NetherHelper
   
     container && opts[:container] ||= container
   
-    javascript_tag("$(#{identifier}).pageless(#{opts.to_json});")
+    javascript_tag("$('#{identifier}').pageless(#{opts.to_json});")
   end
 end
