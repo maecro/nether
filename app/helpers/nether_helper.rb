@@ -2,7 +2,7 @@ module NetherHelper
   def nether(total_pages, url=nil, identifier=nil, container=nil)
     opts = {
       :totalPages => total_pages,
-      :url        => url,
+      :url        => escape_javascript(url),
       :loaderMsg  => 'Loading more results'
     }
   
