@@ -1,0 +1,9 @@
+= Nether
+
+Description
+-----------
+
+Nether is a rails gem for adding endless scrolling to your rails application.
+It uses
+* [PageLess] (https://github.com/jney/jquery.pageless)
+and is based on their demo application.
