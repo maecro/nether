@@ -1,0 +1,19 @@
+Description:
+    The install generator downloads jquery.pageless from
+    github to assets/javascripts.
+
+
+Options:
+
+Examples:
+    rails generate nether:install
+
+        This will create two files:
+            Layout:     app/views/layouts/application.rhtml
+            Stylesheet: public/stylesheets/application.css
+
+
+    ./script/generate app_layout myname --no-css
+
+        This will create one file:
+            Layout:     app/views/layouts/myname.rhtml
