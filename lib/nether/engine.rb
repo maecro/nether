@@ -1,6 +1,6 @@
 require "nether"
 require "rails"
-require "view_helpers"
+require "nether/view_helpers"
 
 module Nether
   class Engine < Rails::Engine
