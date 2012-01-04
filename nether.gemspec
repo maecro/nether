@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Nether::VERSION
   s.authors     = ["Matthew Cross"]
   s.email       = ["mattcross88@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/maecro/nether"
   s.summary     = "Endless page for rails."
   s.description = "Brings endless page to rails 3.1 apps that use assets pipeline."
 
