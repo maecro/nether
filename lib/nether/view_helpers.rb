@@ -1,9 +1,6 @@
 module Nether
   module ViewHelpers
-    def pre(text)
-      content_tag :pre, text
-    end
-
+    
     def nether(total_pages, url=nil, container=nil)
       opts = {
         :totalPages => total_pages,
@@ -15,5 +12,6 @@ module Nether
     
       javascript_tag("$('#results').pageless(#{opts.to_json});")
     end
+    
   end
 end
