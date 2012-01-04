@@ -15,4 +15,4 @@ module Nether
 end
 
 # Require our engine
-require "team_page/engine"
+require "nether/engine"
