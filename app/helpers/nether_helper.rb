@@ -1,5 +1,5 @@
 module NetherHelper
-  def nether(total_pages, url=nil, container=nil)
+  def nether(total_pages, url=nil, identifier=nil, container=nil)
     opts = {
       :totalPages => total_pages,
       :url        => url,
@@ -8,6 +8,6 @@ module NetherHelper
   
     container && opts[:container] ||= container
   
-    javascript_tag("$('#results').pageless(#{opts.to_json});")
+    javascript_tag("$("<%= identifier %>").pageless(#{opts.to_json});")
   end
 end
