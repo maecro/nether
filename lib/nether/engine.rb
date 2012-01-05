@@ -7,10 +7,9 @@ module Nether
       ActionView::Base.send :include, NetherHelper
     end
     
-    initializer 'nether.controller' do |app|
+    initializer 'nether.action_controller' do |app|
       ActiveSupport.on_load(:action_controller) do
-        extend MyModule::ClassMethods
-        include MyModule::InstanceMethods
+        include Nether::NetherController
       end
     end
     
