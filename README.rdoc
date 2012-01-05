@@ -10,11 +10,11 @@ Currently only supports apps using the assets pipeline and will_paginate.
 == Installation
 Add the following to your Gemfile and run the bundle command.
 
-	gem 'nether', :git => "git://github.com/maecro/nether.git"
+  gem 'nether', :git => "git://github.com/maecro/nether.git"
 	
 Once the gem is installed execute the generator to install the js files and images.
 
-	rails generate nether:install
+  rails generate nether:install
 	
 == Usage
 Endless page functionality is handled by a helper function that takes three arguments by default.
@@ -25,14 +25,15 @@ containing the content to be rendered.
 To use the helper add the following to your view after the will paginate helper, replacing 
 variables as necessary.
 
-	<%= nether(@articles.total_pages, articles_path, "#content" %>
+  <%= nether(@articles.total_pages, articles_path, "#content" %>
 
 You must also add the following to the action handling the pagination.
 
-	if request.xhr?
-		render :partial => @articles
-	end
+  if request.xhr?
+    render :partial => @articles
+  end
 	
 == ToDo
 * Remove dependancy on assets pipeline.
 * Compatability with other pagination solutions.
+* Add gem to rubygems.
