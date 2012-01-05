@@ -33,7 +33,7 @@ You must also add the following to the action handling the pagination.
     render :partial => @articles
   end
 	
-== ToDo
+== Todo
 * Remove dependancy on assets pipeline.
 * Compatability with other pagination solutions.
 * Add gem to rubygems.

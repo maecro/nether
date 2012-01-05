@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.name        = "nether"
   s.version     = Nether::VERSION
   s.authors     = ["Matthew Cross"]
-  s.email       = ["mattcross88@gmail.com"]
+  s.email       = ["matthew.evan.cross@gmail.com"]
   s.homepage    = "https://github.com/maecro/nether"
   s.summary     = "Endless page for rails 3.1"
   s.description = "Nether is a rails engine for easily adding endless page functionality to content paginated by will_paginate
