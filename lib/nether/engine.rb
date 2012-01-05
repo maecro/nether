@@ -8,7 +8,11 @@ module Nether
     end
     
     initializer 'nether.controller' do |app|
-      ActionController::Base.send :include, NetherController
+      ActiveSupport.on_load(:action_controller) do
+        extend MyModule::ClassMethods
+        include MyModule::InstanceMethods
+      end
     end
+    
   end
 end
