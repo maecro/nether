@@ -1,9 +1,38 @@
 = Nether
+My first attempt at a rails gem, Nether is an engine for easily adding endless page functionality to content paginated 
+by will_paginate in your rails 3.1 application.
 
-Description
------------
+It uses jquery.pageless[https://github.com/jney/jquery.pageless] and is based heavily on their demo application.
 
-Nether is a rails gem for adding endless scrolling to your rails application.
-It uses
-* [PageLess](https://github.com/jney/jquery.pageless)
-and is based on their demo application.
+== Requirements
+Currently only supports apps using the assets pipeline and will_paginate.
+
+== Installation
+Add the following to your Gemfile and run the bundle command.
+
+	gem 'nether', :git => "git://github.com/maecro/nether.git"
+	
+Once the gem is installed execute the generator to install the js files and images.
+
+	rails generate nether:install
+	
+== Usage
+Endless page functionality is handled by a helper function that takes three arguments by default.
+The total number of pages undergoing pagination, the path to get more content and the css id of the
+dom object to render. There is also an optional fourth argument for specifying the dom object 
+containing the content to be rendered.
+
+To use the helper add the following to your view after the will paginate helper, replacing 
+variables as necessary.
+
+	<%= nether(@articles.total_pages, articles_path, "#content" %>
+
+You must also add the following to the action handling the pagination.
+
+	if request.xhr?
+		render :partial => @articles
+	end
+	
+== ToDo
+* Remove dependancy on assets pipeline.
+* Compatability with other pagination solutions.
