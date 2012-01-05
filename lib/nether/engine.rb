@@ -6,5 +6,9 @@ module Nether
     initializer 'nether.helper' do |app|
       ActionView::Base.send :include, NetherHelper
     end
+    
+    initializer 'nether.controller' do |app|
+      ActionController::Base.send :include, NetherController
+    end
   end
 end
