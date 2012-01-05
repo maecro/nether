@@ -1,4 +1,4 @@
-class NetherController < ApplicationController
+module NetherController
   def nether(partial, delay=3)
       if request.xhr?
       sleep(delay) # make request a little bit slower to see loader :-)
