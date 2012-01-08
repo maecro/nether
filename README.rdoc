@@ -29,9 +29,7 @@ variables as necessary.
 
 You must also add the following to the action handling the pagination.
 
-  if request.xhr?
-    render :partial => @articles
-  end
+  render_nether("articles/article")
 	
 == Todo
 * Remove dependancy on assets pipeline.
