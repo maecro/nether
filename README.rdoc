@@ -27,7 +27,8 @@ variables as necessary.
 
   <%= nether(@articles.total_pages, articles_path, "#content" %>
 
-You must also add the following to the action handling the pagination.
+You must also add the following to the action handling the pagination with the partial to render 
+as an argument. There is also an optional argument to delay rendering.
 
   render_nether("articles/article")
   
