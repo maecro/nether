@@ -30,6 +30,9 @@ variables as necessary.
 You must also add the following to the action handling the pagination.
 
   render_nether("articles/article")
+  
+== Help
+You will find an example app at nether_example[https://github.com/maecro/nether_example].
 	
 == Todo
 * Remove dependancy on assets pipeline.
