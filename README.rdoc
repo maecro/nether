@@ -34,5 +34,4 @@ You must also add the following to the action handling the pagination.
 == Todo
 * Remove dependancy on assets pipeline.
 * Compatability with other pagination solutions.
-* Add gem to rubygems.
 * Test, test, test.
