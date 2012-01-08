@@ -18,6 +18,5 @@ in your rails 3.1 application. Currently only supports apps using the assets pip
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.1.0"
-
-  s.add_development_dependency "sqlite3"
+  
 end
