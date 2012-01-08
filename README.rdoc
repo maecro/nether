@@ -10,7 +10,7 @@ Currently only supports apps using the assets pipeline and will_paginate.
 == Installation
 Add the following to your Gemfile and run the bundle command.
 
-  gem 'nether', :git => "git://github.com/maecro/nether.git"
+  gem 'nether'
 	
 Once the gem is installed execute the generator to install the js files and images.
 
