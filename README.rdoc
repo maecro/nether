@@ -1,5 +1,5 @@
 = Nether
-My first attempt at a rails gem, Nether is an engine for easily adding endless page functionality to content paginated 
+Nether is an engine for easily adding endless page functionality to content paginated 
 by will_paginate in your rails 3.1 application.
 
 It uses jquery.pageless[https://github.com/jney/jquery.pageless] and is based heavily on their demo application.
@@ -33,9 +33,7 @@ as an argument and an optional argument to delay rendering.
   render_nether("articles/article")
   
 == Help
-You will find an example app at nether_example[https://github.com/maecro/nether_example].
-	
-== Todo
-* Remove dependancy on assets pipeline.
-* Compatability with other pagination solutions.
-* Test, test, test.
+* You will find an example app at nether_example[https://github.com/maecro/nether_example].
+
+== Other
+* Todo[https://github.com/maecro/nether/wiki/Todo]
