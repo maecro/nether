@@ -34,6 +34,4 @@ as an argument and an optional argument to delay rendering.
   
 == Help
 * You will find an example app at nether_example[https://github.com/maecro/nether_example].
-
-== Other
-* Todo[https://github.com/maecro/nether/wiki/Todo]
+* The wiki[https://github.com/maecro/nether/wiki] contains other useful information and examples.
