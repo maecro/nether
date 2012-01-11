@@ -1,6 +1,5 @@
 = Nether
-Nether is an engine for easily adding endless page functionality to content paginated 
-by will_paginate in your rails 3.1 application.
+Nether is a rails engine for easily adding endless page functionality to paginated content.
 
 It uses jquery.pageless[https://github.com/jney/jquery.pageless] and is based heavily on their demo application.
 
