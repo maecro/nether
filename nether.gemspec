@@ -11,8 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["matthew.evan.cross@gmail.com"]
   s.homepage    = "https://github.com/maecro/nether"
   s.summary     = "Endless page for rails 3.1"
-  s.description = "Nether is a rails engine for easily adding endless page functionality to content paginated by will_paginate
-in your rails 3.1 application. Currently only supports apps using the assets pipeline and will_paginate."
+  s.description = "Nether is a rails engine for easily adding endless page functionality to paginated content."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]

@@ -5,7 +5,7 @@ by will_paginate in your rails 3.1 application.
 It uses jquery.pageless[https://github.com/jney/jquery.pageless] and is based heavily on their demo application.
 
 == Requirements
-Currently only supports apps using the assets pipeline and will_paginate.
+Currently only supports apps using the assets pipeline.
 
 == Installation
 Add the following to your Gemfile and run the bundle command.
@@ -16,11 +16,11 @@ Once the gem is installed execute the generator to install the js files and imag
 
   rails generate nether:install
 	
-== Usage
+== Usage (will_paginate)
 Endless page functionality is handled by a helper function that takes three arguments by default.
-The total number of pages undergoing pagination, the path to get more content and the css id of the
-dom object to render. There is also an optional fourth argument for specifying the dom object 
-containing the content to be rendered.
+The number of pages, the path to get more content and the css id of the dom object to render. 
+There is also an optional fourth argument for specifying the dom object containing the content 
+to be rendered.
 
 To use the helper add the following to your view after the will paginate helper, replacing 
 variables as necessary.
@@ -31,6 +31,12 @@ You must also add a helper to the action handling the pagination. The helper tak
 as an argument and an optional argument to delay rendering.
 
   render_nether("articles/article")
+
+== Usage (kaminari)
+Usage is the same as for will_paginate, however num_pages must be used in kaminari to return the 
+number of pages.
+
+  <%= nether(@articles.num_pages, articles_path, "#content") %>
   
 == Help
 * You will find an example app at nether_example[https://github.com/maecro/nether_example].
