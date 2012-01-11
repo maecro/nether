@@ -1,7 +1,5 @@
 = Nether
-Nether is a rails engine for easily adding endless page functionality to paginated content.
-
-It uses jquery.pageless[https://github.com/jney/jquery.pageless] and is based heavily on their demo application.
+Nether is a rails engine for easily adding endless page functionality to paginated content. It uses jquery.pageless[https://github.com/jney/jquery.pageless] and is based heavily on their demo application.
 
 == Requirements
 Currently only supports apps using the assets pipeline.
@@ -16,24 +14,18 @@ Once the gem is installed execute the generator to install the js files and imag
   rails generate nether:install
 	
 == Usage (will_paginate)
-Endless page functionality is handled by a helper function that takes three arguments by default.
-The number of pages, the path to get more content and the css id of the dom object to render. 
-There is also an optional fourth argument for specifying the dom object containing the content 
-to be rendered.
+Endless page functionality is handled by a helper function that takes three arguments by default. The number of pages, the path to get more content and the css id of the dom object to render. There is also an optional fourth argument for specifying the dom object containing the content to be rendered.
 
-To use the helper add the following to your view after the will paginate helper, replacing 
-variables as necessary.
+To use the helper add the following to your view after the will paginate helper, replacing variables as necessary.
 
   <%= nether(@articles.total_pages, articles_path, "#content" %>
 
-You must also add a helper to the action handling the pagination. The helper takes the partial to render 
-as an argument and an optional argument to delay rendering.
+You must also add a helper to the action handling the pagination. The helper takes the partial to render as an argument and an optional argument to delay rendering.
 
   render_nether("articles/article")
 
 == Usage (kaminari)
-Usage is the same as for will_paginate, however the method num_pages is instead used to return the 
-number of pages.
+Usage is the same as for will_paginate, however the method num_pages is instead used to return the number of pages.
 
   <%= nether(@articles.num_pages, articles_path, "#content") %>
   
