@@ -18,7 +18,7 @@ Endless page functionality is handled by a helper function that takes three argu
 
 To use the helper add the following to your view after the will paginate helper, replacing variables as necessary.
 
-  <%= nether(@articles.total_pages, articles_path, "#content" %>
+  <%= nether(@articles.total_pages, articles_path, "#content") %>
 
 You must also add a helper to the action handling the pagination. The helper takes the partial to render as an argument and an optional argument to delay rendering.
 
