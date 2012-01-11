@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    nether (0.0.3)
+    nether (0.0.4)
       rails (~> 3.1.0)
 
 GEM
