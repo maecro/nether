@@ -33,7 +33,7 @@ as an argument and an optional argument to delay rendering.
   render_nether("articles/article")
 
 == Usage (kaminari)
-Usage is the same as for will_paginate, however num_pages must be used in kaminari to return the 
+Usage is the same as for will_paginate, however the method num_pages is instead used to return the 
 number of pages.
 
   <%= nether(@articles.num_pages, articles_path, "#content") %>
