@@ -29,6 +29,21 @@ Usage is the same as for will_paginate, however the method num_pages is instead 
 
   <%= nether(@articles.num_pages, articles_path, "#content") %>
   
+== Sticky Footers
+Nether now has inbuilt support for sticky footers. To use the nether sticky footer functionality you must first stickify your application.
+
+  rails generate nether:stickify
+	
+This will install a css file into your stylesheets directory, after which you can simply use the nether block helpers around your content.
+
+    <%= nether_sticky_body do %>
+      # body content
+    <% end %>
+
+    <%= nether_sticky_footer do %>
+      # footer content
+    <% end %>
+
 == Help
 * You will find an example app at nether_example[https://github.com/maecro/nether_example].
 * The wiki[https://github.com/maecro/nether/wiki] contains other useful information and examples.

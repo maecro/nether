@@ -1,0 +1,10 @@
+Description:
+    The stickify generator installs the css files necessary for nether sticky footer functionality.
+
+Options:
+
+Examples:
+    rails generate nether:stickify
+
+        This will create one file:
+            Stylesheet: public/stylesheets/stickify.css
