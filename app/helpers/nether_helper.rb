@@ -19,27 +19,47 @@ module NetherHelper
     javascript_tag("$('#{identifier}').pageless(#{opts.to_json});")
   end
 
+  # Creates a wrapper that sticks nether sticky content in place.
+  #
+  # ==== Signatures
+  #
+  #   nether_sticky_wrap() do
+  #     # ...
+  #   end
+  #
+  #   nether_sticky_wrap(wrap_options = {}) do
+  #     # ...
+  #   end
+  def nether_sticky_wrap(wrap_options={}, content_options={}, &block)
+    if block_given?
+      
+      wrap_options[:class] ||= "nether_wrap"
+      wrap_tag_options = tag_options(wrap_options)
+
+      "<div#{wrap_tag_options}>#{capture(&block)}</div>".html_safe
+    else
+      raise ArgumentError, "Missing block"
+    end
+  end
+  
   # Creates a content area that can be paired with nether_sticky_footer
   #
   # ==== Signatures
   #
-  #   nether_sticky_body() do
+  #   nether_sticky_content() do
   #     # ...
   #   end
   #
-  #   nether_sticky_body wrap_options = {}, content_options = {}, do
+  #   nether_sticky_content(content_options = {}) do
   #     # ...
   #   end
-  def nether_sticky_body(wrap_options={}, content_options={}, &block)
+  def nether_sticky_content(content_options={}, &block)
     if block_given?
       
-      wrap_options[:class] ||= "nether_wrap"
       content_options[:class] ||= "nether_content"
-
-      wrap_tag_options = tag_options(wrap_options)
       content_tag_options = tag_options(content_options)
 
-      "<div#{wrap_tag_options}><div#{content_tag_options}>#{capture(&block)}</div></div>".html_safe
+      "<div#{content_tag_options}>#{capture(&block)}</div>".html_safe
     else
       raise ArgumentError, "Missing block"
     end
