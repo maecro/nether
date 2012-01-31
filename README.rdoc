@@ -39,7 +39,7 @@ This will install a css file into your stylesheets directory, after which you ca
     <%= nether_sticky_wrap do %>
    	  # header content
    	  <%= nether_sticky_content do %>
-      	# body content
+        # body content
       <% end %>
     <% end %>
 
