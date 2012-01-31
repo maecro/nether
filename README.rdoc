@@ -36,8 +36,11 @@ Nether now has inbuilt support for sticky footers. To use the nether sticky foot
 	
 This will install a css file into your stylesheets directory, after which you can simply use the nether block helpers around your content.
 
-    <%= nether_sticky_body do %>
-      # body content
+    <%= nether_sticky_wrap do %>
+   	  # header content
+   	  <%= nether_sticky_content do %>
+      	# body content
+      <% end %>
     <% end %>
 
     <%= nether_sticky_footer do %>
