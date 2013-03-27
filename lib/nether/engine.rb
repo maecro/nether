@@ -6,12 +6,12 @@ module Nether
     initializer 'nether.helper' do |app|
       ActionView::Base.send :include, NetherHelper
     end
-    
+
     initializer 'nether.action_controller' do |app|
       ActiveSupport.on_load(:action_controller) do
-        include Nether::NetherController
+        include NetherController
       end
     end
-    
+
   end
 end
