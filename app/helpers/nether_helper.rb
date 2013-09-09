@@ -1,21 +1,21 @@
 module NetherHelper
-  
+
   # Replaces manual pagination links with endless page.
   #
   # ==== Signatures
   #
   #   nether(total_pages, url, identifier)
-  #   
+  #
   #   nether(total_pages, url, identifier, container)
   def nether(total_pages, url=nil, identifier=nil, container=nil)
     opts = {
       :totalPages => total_pages,
       :url        => escape_javascript(url),
-      :loaderMsg  => 'Loading more results'
+      :loaderMsg  => I18n.t('nether.loader_msg', default: 'Loading more results')
     }
-  
+
     container && opts[:container] ||= container
-  
+
     javascript_tag("$('#{identifier}').pageless(#{opts.to_json});")
   end
 
@@ -32,7 +32,7 @@ module NetherHelper
   #   end
   def nether_sticky_wrap(wrap_options={}, content_options={}, &block)
     if block_given?
-      
+
       wrap_options[:class] ||= "nether_wrap"
       wrap_tag_options = tag_options(wrap_options)
 
@@ -41,7 +41,7 @@ module NetherHelper
       raise ArgumentError, "Missing block"
     end
   end
-  
+
   # Creates a content area that can be paired with nether_sticky_footer
   #
   # ==== Signatures
@@ -55,7 +55,7 @@ module NetherHelper
   #   end
   def nether_sticky_content(content_options={}, &block)
     if block_given?
-      
+
       content_options[:class] ||= "nether_content"
       content_tag_options = tag_options(content_options)
 

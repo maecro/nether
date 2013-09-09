@@ -8,11 +8,11 @@ Currently only supports apps using the assets pipeline.
 Add the following to your Gemfile and run the bundle command.
 
   gem 'nether'
-	
+
 Once the gem is installed execute the generator to install the js files and images.
 
   rails generate nether:install
-	
+
 == Usage (will_paginate)
 Endless page functionality is handled by a helper function that takes three arguments by default. The number of pages, the path to get more content and the css id of the dom object to render. There is also an optional fourth argument for specifying the dom object containing the content to be rendered.
 
@@ -28,12 +28,12 @@ You must also add a helper to the action handling the pagination. The helper tak
 Usage is the same as for will_paginate, however the method num_pages is instead used to return the number of pages.
 
   <%= nether(@articles.num_pages, articles_path, "#content") %>
-  
+
 == Sticky Footers
 Nether now has inbuilt support for sticky footers. To use the nether sticky footer functionality you must first stickify your application.
 
   rails generate nether:stickify
-	
+
 This will install a css file into your stylesheets directory, after which you can simply use the nether block helpers around your content.
 
     <%= nether_sticky_wrap do %>
@@ -46,6 +46,13 @@ This will install a css file into your stylesheets directory, after which you ca
     <%= nether_sticky_footer do %>
       # footer content
     <% end %>
+
+== Internationalization
+By default, Nether displays a message when loading data. This message can be changed by editing the locales file under the key "nether.loader_msg"
+
+    es:
+      nether:
+        loader_msg: 'Cargando datos...'
 
 == Help
 * You will find an example app at nether_example[https://github.com/maecro/nether_example].
